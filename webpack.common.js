@@ -35,7 +35,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
         }
       },
       {
@@ -46,7 +49,8 @@ module.exports = {
             options: { name: 'img/[name].[ext]' }
           },
         ]
-      }
+      },
+      {test : /\.css$/, use:['style-loader', 'css-loader']}
     ]
   }  
  };

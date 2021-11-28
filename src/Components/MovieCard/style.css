@@ -1,0 +1,10 @@
+.card {
+    background-color: #232323;
+}
+.card-img-top {
+    min-height: 260px;
+}
+.card-body {
+    background-color: #232323;
+    color: #fff;
+}
