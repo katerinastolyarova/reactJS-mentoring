@@ -1,6 +1,8 @@
+@use 'App';
+
 .Footer {
     background: #424242;
-    color: #F65261;
+    color: App.$font-color;
     padding: auto;
     justify-content: center;
     text-align: center;

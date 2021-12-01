@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start:dev": "webpack serve --config webpack.dev.config.js --open --progress",
-    "start:prod": "webpack serve --config webpack.prod.config.js --open",
-    "build:prod": "webpack --config webpack.prod.config.js",
-    "build:dev": "webpack --config webpack.dev.config.js",
+    "start:dev": "cross-env NODE_ENV=dev webpack serve --config webpack.dev.config.js --open --progress",
+    "start:prod": "cross-env NODE_ENV=production webpack serve --config webpack.prod.config.js --open",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.prod.config.js",
+    "build:dev": "cross-env NODE_ENV=dev webpack --config webpack.dev.config.js",
     "code:check": "./node_modules/.bin/eslint '**/*.js'",
     "code:fix": "./node_modules/.bin/eslint '**/*.js' --fix",
     "prepare": "husky install"
@@ -26,7 +26,8 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.43.5"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
@@ -45,6 +46,7 @@
     "jest": "^27.3.1",
     "lint-staged": "^12.1.2",
     "prettier": "^2.4.1",
+    "sass-loader": "^12.3.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.3",
     "webpack-cli": "^4.9.1",

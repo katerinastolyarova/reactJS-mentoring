@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Martel+Sans&display=swap");
+@use 'App';
 
 .main {
   width: 100%;
@@ -23,12 +22,12 @@
   justify-content: center;
   text-align: center;
   margin-top: 70px;
-}
 
-.area h3 {
-  margin-top: -30px;
-  font-size: 27px;
-  font-weight: normal;
+  h3 {
+    margin-top: -30px;
+    font-size: 27px;
+    font-weight: normal;
+  }
 }
 
 .search {
@@ -54,7 +53,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #e50914;
+    background-color: App.$font-color;
     min-height: 70px;
     width: 70%;
     font-size: 30px;

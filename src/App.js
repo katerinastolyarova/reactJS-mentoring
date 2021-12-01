@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Containers/Header';
 import Container from './Containers/Container/Container';
 import Footer from './Components/Footer/index';
-import './App.css';
+import './App.scss';
 
 export default function App() {
   return (

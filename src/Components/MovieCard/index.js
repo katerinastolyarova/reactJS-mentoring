@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import './style.css';
+import './style.scss';
 
 export default function MovieCard(props) {
   return (
@@ -20,6 +20,5 @@ export default function MovieCard(props) {
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired
 };

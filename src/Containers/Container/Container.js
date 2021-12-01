@@ -1,6 +1,6 @@
 import React from 'react';
 import MoviesList from '../MoviesList/MoviesList';
-import { ErrorBoundary } from '../../Utils/ErrorBoundary';
+import ErrorBoundary from '../../Utils/ErrorBoundary';
 
 export default function Container() {
   return (

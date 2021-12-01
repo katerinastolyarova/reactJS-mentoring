@@ -1,3 +1,5 @@
+@use 'App';
+
 .navbar {
     display: flex;
     flex-direction: row;
@@ -10,19 +12,28 @@
     justify-content: space-between;
     background-color: transparent;
     align-self: center;
-  }
   
-  .navbar li {
-    margin: 0 50px;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-  }
-  .navbar li:nth-child(2) {
-    margin-top: -10px;
-    margin-right: 70px;
-  }
-  .logo img {
+    li {
+      margin: 0 50px;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+    }
+
+    li:nth-child(2) {
+      margin-top: -10px;
+      margin-right: 70px;
+    }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+
+  img {
     width: 180px;
     display: flex;
     flex-direction: column;
@@ -30,21 +41,13 @@
     justify-content: center;
     align-self: center;
   }
-  
-  .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-  }
-  
-  .buttons {
-    background-color: #e50914;
+}
+.buttons {
+    background-color: App.$font-color;
     padding: 7px 17px;
     color: white;
     display: flex;
     flex-direction: row;
     border-radius: 3px;
-  }
+}
   
