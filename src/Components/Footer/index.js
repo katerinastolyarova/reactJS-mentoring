@@ -5,7 +5,7 @@ import './style.scss';
 const Footer = (props) => <div className='Footer'>{props.children}</div>;
 
 Footer.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.element
 };
 
 export default Footer;

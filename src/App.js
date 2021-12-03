@@ -6,14 +6,12 @@ import './App.scss';
 
 export default function App() {
   return (
-    <>
-      <div className="wrapper">
-        <Header />
-        <Container />
-        <Footer>
-          <p> netflixroulette </p>
-        </Footer>
-      </div>
-    </>
+    <div className="wrapper">
+      <Header />
+      <Container />
+      <Footer>
+        <p> netflixroulette </p>
+      </Footer>
+    </div>
   );
 }
