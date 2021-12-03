@@ -1,0 +1,13 @@
+@use 'App';
+
+.Footer {
+    background: #424242;
+    color: App.$font-color;
+    padding: auto;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
