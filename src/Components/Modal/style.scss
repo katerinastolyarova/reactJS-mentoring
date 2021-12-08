@@ -1,0 +1,43 @@
+@use 'App';
+
+.modal-content {
+    background-color: App.$background-black;
+    color: #fff;
+  }
+
+.modal-header {
+   border-bottom: none;
+ }
+
+.close {
+  color: #fff;
+  text-shadow: none;
+  font-size: 2rem;
+}
+label {
+  color: #F65261;
+}
+
+
+.form-control {
+    background-color: #424242;
+    color: App.$background-color;
+    background-clip: none;
+    border: none;
+  } 
+  
+  .form-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    border-color: #F65261;
+    background-color: App.$background-black;
+    color:#F65261;
+  }
+  
+  .modal-footer {
+      border-top: none;
+  }
+  .ButtonColor {
+    background-color:#F65261;
+    border-color: #F65261;
+  } 
