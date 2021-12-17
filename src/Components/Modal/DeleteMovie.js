@@ -20,6 +20,6 @@ export default function DeleteMovie(props) {
 } 
 
 DeleteMovie.propTypes = {
-  del_movie: PropTypes.boolean.isRequired,
-  onHide: PropTypes.boolean.isRequired,
+  del_movie: PropTypes.boolean,
+  onHide: PropTypes.boolean,
 };

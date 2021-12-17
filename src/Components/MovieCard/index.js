@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Dropdown } from 'react-bootstrap';
+import DropdownMenu from './DropdownMenu';
 import EditMovie from '../../Components/Modal/EditMovie';
 import DeleteMovie from '../../Components/Modal/DeleteMovie';
 import PropTypes from 'prop-types';
@@ -18,15 +18,7 @@ export default function MovieCard(props) {
     <div className='col'>
       <div className='card'>
         <img className='card-img-top' src={props.image} alt='Card image cap'></img>
-        <Dropdown>
-          <Dropdown.Toggle>
-            <span className="threedots"></span>
-          </Dropdown.Toggle>
-          <Dropdown.Menu size="sm" title=""> 
-            <Dropdown.Item onClick={handleShow}>Edit</Dropdown.Item>
-            <Dropdown.Item onClick={handleShowDel}>Delete</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+        <DropdownMenu handleShow={handleShow} handleShowDel={handleShowDel} />
         <EditMovie show={show} onHide={handleClose} />
         <DeleteMovie del_movie={del_movie} onHide={handleCloseDel} />
 
