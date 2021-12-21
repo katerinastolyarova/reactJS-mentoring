@@ -3,13 +3,13 @@ import MoviesList from '../MoviesList/MoviesList';
 import ContainerBar from '../../Components/Navbar/ContainerBar';
 import ErrorBoundary from '../../Utils/ErrorBoundary';
 
-const Container = ({ movies }) => {
+const Container = ({ movies, showMovieDetails }) => {
   return (
     <div className='container'>
       <div className='row'>
         <ContainerBar />
         <ErrorBoundary>
-          <MoviesList movies={ movies } />
+          <MoviesList movies={ movies } showMovieDetails={ showMovieDetails } />
         </ErrorBoundary>
       </div>
     </div>
@@ -18,6 +18,7 @@ const Container = ({ movies }) => {
 
 Container.propTypes = {
   movies: [],
+  showMovieDetails: Boolean,
 };
 
 export default Container;

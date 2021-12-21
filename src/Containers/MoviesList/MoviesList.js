@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieCard from '../../Components/MovieCard/index';
 
-const MoviesList = ({ movies }) => {
+const MoviesList = ({ movies, showMovieDetails }) => {
   if (movies.length === 0) {
     throw new Error ('not performing tonight!');
   }
@@ -10,10 +10,9 @@ const MoviesList = ({ movies }) => {
     <>
       {movies.map((movie) => (
         <MovieCard
-          image={movie.img}
-          title={movie.title}
-          description={movie.description}
           key={movie.id}
+          movie={movie}
+          showMovieDetails={showMovieDetails}
         />
       ))}
     </>
@@ -22,6 +21,7 @@ const MoviesList = ({ movies }) => {
 
 MoviesList.propTypes = {
   movies: [],
+  showMovieDetails: Boolean,
 };
 
 export default MoviesList;
