@@ -3,9 +3,9 @@ import { Button, Modal } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-export default function DeleteMovie(props) {
+export default function DeleteMovie({del_movie, onHide}) {
   return (
-    <Modal show={props.del_movie} onHide={props.onHide}>
+    <Modal show={del_movie} onHide={onHide}>
       <Modal.Header closeButton>
       </Modal.Header>
       <Modal.Body>
@@ -13,7 +13,7 @@ export default function DeleteMovie(props) {
         <p>Are you sure you want to delete this movie?</p>
       </Modal.Body>
       <Modal.Footer>
-        <Button className="ButtonColor" onClick={props.onHide}>CONFIRM</Button>
+        <Button className="ButtonColor" onClick={onHide}>CONFIRM</Button>
       </Modal.Footer>
     </Modal>
   );

@@ -12,7 +12,7 @@ const MoviesList = ({ movies, showMovieDetails }) => {
         <MovieCard
           key={movie.id}
           movie={movie}
-          showMovieDetails={showMovieDetails}
+          showMovieDetailsProps={showMovieDetails}
         />
       ))}
     </>

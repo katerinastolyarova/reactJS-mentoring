@@ -13,19 +13,17 @@ function MovieDetails(props) {
   }, [props.id]);
 
   return (
-    <>
-      <div className='main'>
-        <div className='row'>
-          <div className='col'>
-            <img width="400" height="500" src={movie.img} alt='Card image cap'></img>
-          </div>
-          <div className='col'>
-            <h3 style={{ color: '#fff' }}>{movie.title}</h3>
-            <p style={{ color: '#fff' }}>{movie.description}</p>
-          </div>
+    <div className='main'>
+      <div className='row'>
+        <div className='col'>
+          <img width="400" height="500" src={movie.img} alt='Card image cap'></img>
         </div>
-      </div>  
-    </>
+        <div className='col'>
+          <h3 style={{ color: '#fff' }}>{movie.title}</h3>
+          <p style={{ color: '#fff' }}>{movie.description}</p>
+        </div>
+      </div>
+    </div>  
   );  
 }
 

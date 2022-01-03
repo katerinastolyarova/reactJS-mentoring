@@ -5,7 +5,7 @@ import DeleteMovie from '../../Components/Modal/DeleteMovie';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-export default function MovieCard(props) {
+export default function MovieCard({ movie, showMovieDetailsProps}) {
   const [show, setShow] = useState(false);
   const [del_movie, setDelete] = useState(false);
 
@@ -14,19 +14,19 @@ export default function MovieCard(props) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const showMovieDetails = useCallback(() => props.showMovieDetails(props.movie.id), [props.showMovieDetails, props.movie.id]);
+  const showMovieDetails = useCallback(() => showMovieDetailsProps(movie.id), [showMovieDetailsProps, movie.id]);
 
   return (
     <div className='col'>
       <div className='card' onClick={showMovieDetails}>
-        <img className='card-img-top' src={props.movie.img} alt='Card image cap'></img>
+        <img className='card-img-top' src={movie.img} alt='Card image cap'></img>
         <DropdownMenu handleShow={handleShow} handleShowDel={handleShowDel} />
         <EditMovie show={show} onHide={handleClose} />
         <DeleteMovie del_movie={del_movie} onHide={handleCloseDel} />
 
         <div className='card-body'>
-          <h3>{props.movie.title}</h3>
-          <p>{props.movie.description}</p>
+          <h3>{movie.title}</h3>
+          <p>{movie.description}</p>
         </div>  
       </div>
     </div>
@@ -34,9 +34,9 @@ export default function MovieCard(props) {
 }
 
 MovieCard.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: PropTypes.shape,
   'movie.title': PropTypes.string.isRequired,
   'movie.description': PropTypes.string.isRequired,
   'movie.img': PropTypes.string.isRequired,
-  showMovieDetails: PropTypes.Boolean
+  showMovieDetailsProps: PropTypes.Boolean
 };

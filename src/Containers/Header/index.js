@@ -8,12 +8,7 @@ export default function Header({showSearchPanel, movieId}) {
   return (
     <>
       <Navbar showSearchPanel={showSearchPanel} movieId={movieId} />
-      {movieId && (
-        <MovieDetails id={movieId} />
-      )}
-      {!movieId && (
-        <Search />
-      )}   
+      { movieId ? <MovieDetails id={movieId} />  : <Search /> }   
     </>
   );  
 }
